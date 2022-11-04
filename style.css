@@ -1,0 +1,92 @@
+@import "compass/css3";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    box-sizing: border-box;
+    background-color: rgb(19, 9, 9);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+span {
+    margin: 0;
+    display: block;
+    text-transform: capitalize;
+    border-bottom: 2px solid red;
+}
+
+b {
+    height: 1px;
+    border-bottom: 10px solid #ff008c6b
+}
+
+span:nth-child(9) {
+    border: none;
+}
+
+#outter-container {
+    height: calc(100vh - 200px);
+    max-width: min-content;
+    padding: 10vh 10vw;
+    margin: 0 auto;
+}
+
+hr {
+    color: red;
+    /* border: 0; */
+    /* border-top: 30px; */
+    box-shadow: 2px 2px 2px #ff008c;
+}
+
+/* hr:nth-child(4){
+    margin-bottom: -10px;
+} */
+
+
+
+h1 {
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 10;
+    color: rgb(28, 36, 61);
+}
+
+@supports not (-webkit-text-stroke: 3px darkgrey) {
+    h1 {
+        text-shadow:
+            1px 1px rgba(215, 233, 252, 0.693),
+            -1px -1px rgba(215, 233, 252, 0.693),
+            -1px 1px 4px rgba(215, 233, 252, 0.693),
+            -1px -2px 5px rgba(215, 233, 252, 0.693);
+    }
+}
+
+@supports(-webkit-text-stroke: 1.5px rgba(215, 233, 252, 0.693)) {
+    h1 {
+        text-shadow: 2px 2px 5px rgba(215, 233, 252, 0.693);
+        -webkit-text-stroke: 1.5px rgba(215, 233, 252, 0.693);
+        -webkit-text-fill-color: rgb(28, 36, 61);
+        -webkit-animation: fill 0.5s infinite alternate;
+
+        @-webkit-keyframes fill {
+            from {
+                -webkit-text-fill-color: steelblue;
+            }
+
+            to {
+                -webkit-text-fill-color: slategrey;
+            }
+        }
+    }
+
+}
